@@ -12,6 +12,8 @@ gomi（日本語で「ゴミ」）は、Goで書かれたシンプルなCLIツ�
 
 https://github.com/babarot/gomi
 
+https://babarot.me/gomi
+
 ## 主な機能
 
 - rm コマンドと同じように動作しますが、ファイルを完全に削除するのではなく、ゴミ箱に移動します
