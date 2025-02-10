@@ -3,7 +3,7 @@ title: "Datadogダッシュボードをスクショして毎日Slackに送る"
 emoji: "🗼"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["datadog", "go", "slack"]
-published: false
+published: true
 ---
 
 こんにちは！今日は、Datadogのダッシュボードを毎日Slackに送信するための自動化について紹介します。Datadogには[Scheduled Reports](https://docs.datadoghq.com/dashboards/sharing/scheduled_reports/)というダッシュボードのサマリをメールで送信してくれる機能がありますが、PDF形式で送られてくるため、Slackでの視認性が良くなく他のメンバーにとって見づらいという問題がありました。そこで、Headlessブラウザを使ってスクリーンショットを撮影し、GitHub ActionsのCron機能([schedule workflow](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule))を使って毎日定刻にSlackチャンネルに投稿する仕組みを作成しました。
