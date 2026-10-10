@@ -1,7 +1,7 @@
 ---
 title: "UNIX rm コマンドのより安全な代替ツール「gomi」"
 emoji: "🗑️"
-type: "tech" # tech: 技術記事 / idea: アイデア
+type: "tech"
 topics: ["go", "cli"]
 published: true
 ---

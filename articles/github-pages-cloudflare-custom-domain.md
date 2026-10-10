@@ -1,7 +1,7 @@
 ---
 title: "CloudflareでGitHub Pagesのカスタムドメインを設定する"
 emoji: "🗼"
-type: "tech" # tech: 技術記事 / idea: アイデア
+type: "tech"
 topics: ["githubpages", "cloudflare"]
 published: true
 ---

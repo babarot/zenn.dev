@@ -1,7 +1,7 @@
 ---
 title: "Datadogダッシュボードをスクショして毎日Slackに送る"
 emoji: "🗼"
-type: "tech" # tech: 技術記事 / idea: アイデア
+type: "tech"
 topics: ["datadog", "go", "slack"]
 published: true
 ---
