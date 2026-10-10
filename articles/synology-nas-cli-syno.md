@@ -91,7 +91,7 @@ syno は基本的に読むだけの道具だが、例外が2つある。`syno co
 
 `syno wake` を使うには、DSM のコントロールパネルの「ハードウェアと電源」で Wake-on-LAN を有効にしておく必要がある（無効なら `syno login` のときにそう知らせる）。電源が切れた NAS には MAC アドレスを聞けないので、`syno login` のときに MAC アドレスをプロファイルに保存しておき、そこに向けてマジックパケットをブロードキャストする。パケットはルーターや VPN を越えないので、NAS と同じネットワークから実行する。
 
-### dashboard
+### グラフで見る
 
 `syno dashboard`（`syno dash`）は、同じ情報を localhost の Web ページで見せる。
 
@@ -166,7 +166,7 @@ syno でわかるのは NAS の状態までだが、そこから先の判断は 
 
 ### syno と claude-recall を組み合わせる
 
-syno でわかるのは、NAS の今の状態まで。なぜそのコンテナを立てたのか、といった経緯は NAS には残っていない。そこで、Claude Code の過去のセッションを検索する自作の [claude-recall](https://github.com/babarot/claude-recall) と組み合わせると、経緯まで含めて答えられるようになる。
+syno でわかるのは、NAS の今の状態まで。なぜそのコンテナを立てたのか、といった経緯は NAS には残っていない。そこで、Claude Code の過去のセッションを検索するツールである [claude-recall](https://github.com/babarot/claude-recall) と組み合わせると、経緯まで含めて答えられるようになる。
 
 例えば NAS で nginx-1 というコンテナが 8081 番ポートで HTTP を配信していて、何のためのものか覚えていなかった。「なぜこれ配信しているのか、もう落としても良いのかを recall で調べて」と頼むと、AI は `syno_containers`（MCP）で今の状態を、recall で過去の会話を、並行して調べた。AI の結論は、別のプロジェクトで NAS からの読み込みが遅い原因を調べたときに、「NAS の中身を HTTP で配る」案を試すために立てたもので、その案は採用されなかったので消してよい、というものだった。syno の出力からコンテナが数分前に再起動していることにも気づいて、自動で再起動する設定があるかもしれないので、止めるより削除した方が確実だとも添えていた。
 
@@ -174,7 +174,7 @@ syno から「今 NAS で何が動いているか」が、recall から「なぜ
 
 ## 非公開APIとの付き合い方
 
-DSM の Web API は、一部しか公式のドキュメントがない。自分の NAS には API が760個以上あったが、DSM はメソッドの一覧を返さない。syno を作るときも、スキルで AI に探させるときも、手探りで調べることになる。実際にやったことをまとめておく。
+DSM の Web API の公式のドキュメントは、ログイン（[DSM Login Web API Guide](https://kb.synology.com/en-global/DG/DSM_Login_Web_API_Guide/1)）や File Station（[File Station API Guide](https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf)）など、一部の API の分しかない。自分の NAS には API が760個以上あったが、DSM はメソッドの一覧を返さない。syno を作るときも、スキルで AI に探させるときも、手探りで調べることになる。実際にやったことをまとめておく。
 
 - 推測で書いて、`--raw` で突き合わせる: 最初から `syno status --raw` で DSM の応答をそのまま出せるようにしておいた。推測で書いた構造体を実機の応答と比べて直す。ベンダー名が空白で埋められていたり（`"WDC     "`）、プールの ID が内部の `reuse_1` だったりした
 - パラメータなしで呼んで、メソッドの有無を調べる: メソッドがなければエラー 103、あってもパラメータが足りなければ 114 が返る。NAS を変えずに、`start` や `stop` があるかがわかる
