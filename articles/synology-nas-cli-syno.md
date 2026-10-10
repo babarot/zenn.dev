@@ -1,8 +1,8 @@
 ---
-title: "Synology NASを読むCLIを作り、AIからも診断できるようにした"
+title: "Synology NASの状態をClaude Codeに把握してもらうためのCLIを作った"
 emoji: "🗄️"
 type: "tech"
-topics: ["synology", "nas", "cli", "mcp", "go"]
+topics: ["synology", "nas", "claudecode", "mcp", "cli"]
 published: false
 ---
 ## なぜNASをCLIで見たいか
