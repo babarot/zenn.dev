@@ -3,7 +3,7 @@ title: "Synology NASの状態をClaude Codeに把握してもらうためのCLI�
 emoji: "🗄️"
 type: "tech"
 topics: ["synology", "nas", "claudecode", "mcp", "cli"]
-published: false
+published: true
 ---
 ## なぜNASをCLIで見たいか
 
