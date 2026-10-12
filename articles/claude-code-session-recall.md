@@ -128,7 +128,7 @@ _transcript が消えたセッションで Enter を押したところ_
 `recall ui` で、ブラウザでセッションと会話を読める（`http://localhost:6276`）。TUI は戻れるのが強みで、Web UI は長い会話や画像を読みやすいのが強み、という分担にしている。動かしている間は新しいメッセージが半秒ほどで反映されるので、動いているセッションを横で眺めることもできる。
 
 ![](https://assets.babarot.dev/files/2026/10/a3e27f21777d4de4.png)
-_いま作り直している Web UI のモック_
+_Web UI でセッションを開いたところ_
 
 ## Claude Code Modsとの連携
 
