@@ -127,6 +127,12 @@ _transcript が消えたセッションで Enter を押したところ_
 
 `recall ui` で、ブラウザでセッションと会話を読める（`http://localhost:6276`）。TUI は戻れるのが強みで、Web UI は長い会話や画像を読みやすいのが強み、という分担にしている。動かしている間は新しいメッセージが半秒ほどで反映されるので、動いているセッションを横で眺めることもできる。
 
+![](https://assets.babarot.dev/files/2026/10/fea42e0bab185bcc.png)
+_セッションの一覧_
+
+![](https://assets.babarot.dev/files/2026/10/c04e4c34b7a8c0fa.png)
+_セッションを1つ開いたところ_
+
 ## Claude Code Modsとの連携
 
 Claude Code には、plugin から Claude Code の画面に描画したり、スラッシュコマンドを足したりできる mod（hooks module）という仕組みがある。まだ新しい機能で、詳しくは公式のリファレンスにある。
