@@ -3,7 +3,7 @@ title: "Claude Codeに過去の会話を思い出させる"
 emoji: "🗃️"
 type: "tech"
 topics: ["claudecode", "mcp", "go", "sqlite", "tui"]
-published: false
+published: true
 ---
 ## 過去のClaude Codeとの会話をどう思い出すか
 
